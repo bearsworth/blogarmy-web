@@ -6,7 +6,7 @@ import { Image as HeroImage } from "@heroui/image";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 
-import ShuffleHero from "../components/shuffle-hero";
+import MapAnimation from "../components/map-animation";
 
 import ValuesBar from "../components/valuesbar";
 import CtaHero from "../components/cta-hero";
@@ -45,9 +45,9 @@ export default function Home() {
   return (
     <FrontContainer>
       <div className="bg-neutral-100 dark:bg-neutral-950 py-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex mx-6">
-            <div className="basis-12/12 sm:basis-5/12 flex flex-col justify-center items-center mx-0 sm:mx-auto">
+        <div className="max-w-5xl mx-auto py-12 md:h-[420px] sm:h-[360px]">
+          <div className="flex flex-col sm:flex-row mx-6">
+            <div className="sm:basis-5/12 flex flex-col justify-center items-center mx-0 sm:mx-auto">
               <div>
                 <span className="text-3xl md:text-5xl font-bold">
                   {MainMessage}
@@ -55,6 +55,9 @@ export default function Home() {
               </div>
               <div className="mt-8">
                 <h5>{MainSubMessage}</h5>
+              </div>
+              <div className="w-full flex justify-center sm:hidden">
+                <MapAnimation />
               </div>
               <div>
                 <Link href="/signin">
@@ -64,14 +67,11 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="ml-6 hidden sm:block sm:basis-7/12">
-              <ShuffleHero />
+            <div className="hidden sm:block sm:ml-6 sm:basis-7/12 mt-12 sm:mt-0">
+              <MapAnimation />
             </div>
           </div>
         </div>
-      </div>
-      <div className="block sm:hidden px-4 mt-4">
-        <ShuffleHero />
       </div>
       <div className="flex flex-col items-center mt-14 max-w-5xl mx-auto ">
         <div className="flex gap-2 items-center">

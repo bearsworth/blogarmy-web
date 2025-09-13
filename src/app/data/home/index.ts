@@ -1,11 +1,9 @@
 import type { ValuesBarProps } from "@/app/components/valuesbar";
 
-export const CompanyName = "VideoShortcut";
-
-export const MainMessage = "Create viral AI Apps on Auto-pilot";
+export const MainMessage = "Command Your Blog Content";
 
 export const MainSubMessage =
-  "Build and deploy AI applications in minutes with our automated system";
+  "Take control of your blogs all in one place using the latest AI tools. No frills, battle-tested.";
 
 export const Section1Title = "Smart features for your business";
 export const Section1SubMessage =

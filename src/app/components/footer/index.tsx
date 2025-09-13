@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <div className="bg-neutral-100 dark:bg-neutral-950 pt-16 sm:pt-24 pb-24 sm:pb-32 mt-24 px-8">
       <div className="max-w-5xl mx-auto flex flex-wrap">
-        <div className="basis-12/12 sm:basis-6/12 flex flex-col gap-4">
+        <div className="basis-12/12 sm:basis-6/12 flex flex-col gap-4 sm:pr-12">
           <span className="text-2xl font-semibold">{CompanyName}</span>
           <span>{CompanyDescription}</span>
           <span className="text-sm text-neutral-500">
