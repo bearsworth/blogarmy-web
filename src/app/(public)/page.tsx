@@ -44,16 +44,16 @@ export default function Home() {
 
   return (
     <FrontContainer>
-      <div className="bg-neutral-100 dark:bg-neutral-950 py-6">
+      <div className="bg-neutral-950 py-6 bg-[url('/images/bg-topo.svg')]">
         <div className="max-w-5xl mx-auto py-12 md:h-[420px] sm:h-[360px]">
           <div className="flex flex-col sm:flex-row mx-6">
             <div className="sm:basis-5/12 flex flex-col justify-center items-center mx-0 sm:mx-auto">
               <div>
-                <span className="text-3xl md:text-5xl font-bold">
+                <span className="text-3xl md:text-5xl font-bold text-white">
                   {MainMessage}
                 </span>
               </div>
-              <div className="mt-8">
+              <div className="mt-8 text-white">
                 <h5>{MainSubMessage}</h5>
               </div>
               <div className="w-full flex justify-center sm:hidden">

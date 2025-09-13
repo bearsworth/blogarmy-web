@@ -5,9 +5,9 @@ export const MainMessage = "Command Your Blog Content";
 export const MainSubMessage =
   "Take control of your blogs all in one place using the latest AI tools. No frills, battle-tested.";
 
-export const Section1Title = "Smart features for your business";
+export const Section1Title = "Designed by Creators, for Creators";
 export const Section1SubMessage =
-  "We focus on helping you to make useful content more accessible with an utlimate goal for a good sharing profit as a content creator.";
+  "Built to streamline your content creation process with powerful AI tools. Now you can easily manage hundreds of blog content at the click of a button.";
 
 export const Section2Values: ValuesBarProps = {
   value1: "What to Watch",
