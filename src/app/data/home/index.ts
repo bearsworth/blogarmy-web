@@ -29,7 +29,7 @@ export const Section2Values: ValuesBarProps = {
 
 export const Section4Title = "Simple, intuitive, and powerful";
 export const Section4SubMessage =
-  "Offers a unified platform that fosters innovation while providing end-to-end data management.";
+  "Control your blog content with ease using our intuitive interface and powerful AI tools";
 
 export const Section5Title = "";
 
