@@ -10,6 +10,7 @@ import {
 } from "@heroui/react";
 import { Icon } from "@iconify/react";
 
+import TypingText from "../typing-text";
 import { EllipsisLoader } from "../ellipsis-loader";
 import {
   Node1Title,
@@ -138,15 +139,17 @@ export function PromptNodeResult() {
   return (
     <>
       <Card className="w-[280px] h-[500px]">
-        <div className="pointer-events-auto">
-          <iframe
-            width="280"
-            height="500"
-            src={NodeResultSrc}
-            title="YouTube Short"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+        <div className="pointer-events-auto p-8">
+          <div>
+            <span className="text-lg font-semibold">Sample Content</span>
+          </div>
+          <TypingText
+            text={Node2Content}
+            speed={20}
+            imageSrc="/images/digital-nomad.jpg"
+            repeatDelay={3000}
+            imageDelay={250}
+          />
         </div>
       </Card>
       <div>
