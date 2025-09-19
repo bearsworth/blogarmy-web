@@ -21,7 +21,7 @@ const actionCodeSettings = {
   // URL must be in the authorized domains list in the Firebase Console.
   url: isDev
     ? "http://localhost:3000/authorize"
-    : `https://app.${Domain}/authorize`,
+    : `https://${Domain}/authorize`,
   // This must be true.
   handleCodeInApp: true,
   // The domain must be configured in Firebase Hosting and owned by the project.
