@@ -25,7 +25,7 @@ const actionCodeSettings = {
   // This must be true.
   handleCodeInApp: true,
   // The domain must be configured in Firebase Hosting and owned by the project.
-  linkDomain: `app.${Domain}.com`,
+  linkDomain: `app.${Domain}`,
 };
 
 export default function SignInComponent() {
