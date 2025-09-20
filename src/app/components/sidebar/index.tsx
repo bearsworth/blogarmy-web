@@ -6,6 +6,7 @@ import { Icon } from "@iconify/react";
 import { useMediaQuery } from "usehooks-ts";
 import { cn } from "@heroui/react";
 import { signOut } from "@firebase/auth";
+import { useRouter } from "next/navigation";
 
 import Sidebar from "./sidebar";
 
@@ -34,9 +35,11 @@ import { auth } from "@/app/firebase/config";
  */
 export default function SidebarComponent() {
   const isCompact = useMediaQuery("(max-width: 768px)");
+  const router = useRouter();
   const onLogoutPress = async () => {
     try {
       await signOut(auth);
+      router.push("/signin");
     } catch (error) {
       if (isDev) {
         console.log("Error signing out:", error);
