@@ -5,11 +5,14 @@ import { Avatar, Button, ScrollShadow, Spacer, Tooltip } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { useMediaQuery } from "usehooks-ts";
 import { cn } from "@heroui/react";
+import { signOut } from "@firebase/auth";
 
 import Sidebar from "./sidebar";
 
 import { AcmeIcon } from "./acme";
 import { sectionItemsWithTeams } from "./sidebar-items";
+import { isDev } from "@/app/utils/checkAuth";
+import { auth } from "@/app/firebase/config";
 
 /**
  *  This example requires installing the `usehooks-ts` package:
@@ -31,6 +34,15 @@ import { sectionItemsWithTeams } from "./sidebar-items";
  */
 export default function SidebarComponent() {
   const isCompact = useMediaQuery("(max-width: 768px)");
+  const onLogoutPress = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      if (isDev) {
+        console.log("Error signing out:", error);
+      }
+    }
+  };
 
   return (
     <div
@@ -146,6 +158,7 @@ export default function SidebarComponent() {
               )
             }
             variant="light"
+            onPress={onLogoutPress}
           >
             {isCompact ? (
               <Icon
